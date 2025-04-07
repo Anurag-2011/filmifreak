@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - FilmiFreak</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #6d28d9;
+            --secondary-color: #18181b;
+            --accent-color: #10b981;
+            --dark-bg: #0f0f0f;
+            --dark-element: #1a1a1a;
+            --medium-dark: #252525;
+            --dark-text: #e0e0e0;
+            --light-text: #ffffff;
+            --muted-text: #a0a0a0;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .about-section {
+            padding: 50px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--light-text);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .about-text {
+            padding: 20px;
+        }
+
+        .about-text h2 {
+            font-size: 1.8rem;
+            color: var(--light-text);
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: var(--muted-text);
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .stat-card {
+            background-color: var(--dark-element);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: var(--muted-text);
+            font-size: 1.1rem;
+        }
+
+        .team {
+            margin-top: 50px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .team-member {
+            background-color: var(--dark-element);
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .member-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .member-info {
+            padding: 20px;
+        }
+
+        .member-name {
+            font-size: 1.3rem;
+            color: var(--light-text);
+            margin-bottom: 5px;
+        }
+
+        .member-role {
+            color: var(--muted-text);
+            margin-bottom: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: var(--light-text);
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="about-section">
+            <h1 class="section-title">About FilmiFreak</h1>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>FilmiFreak was founded in 2025 with a simple mission: to make movie booking easier and more enjoyable for everyone. We believe that going to the movies should be a seamless experience from start to finish.</p>
+                    <p>Our platform combines cutting-edge technology with a user-friendly interface to provide the best movie booking experience. We're constantly innovating to bring you new features and improvements.</p>
+                    <p>Whether you're a casual moviegoer or a film enthusiast, FilmiFreak is your one-stop destination for all things cinema.</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba" alt="Movie Theater" class="about-image">
+            </div>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">1M+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Movies Booked</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Cities</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Customer Support</div>
+                </div>
+            </div>
+            
+            <div class="team">
+                <h2 class="section-title">Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="WhatsApp Image 2025-04-07 at 9.00.47 PM.jpeg" alt="Team Member" class="member-image">
+                        <div class="member-info">
+                            <h3 class="member-name">Ankit Bhati</h3>
+                            <p class="member-role">CEO & Founder</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="WhatsApp Image 2025-04-07 at 9.14.12 PM.jpeg" alt="Team Member" class="member-image">
+                        <div class="member-info">
+                            <h3 class="member-name">Tanmay Gosavi</h3>
+                            <p class="member-role">CTO & Co-founder</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="WhatsApp Image 2025-04-07 at 9.24.31 PM.jpeg" alt="Team Member" class="member-image">
+                        <div class="member-info">
+                            <h3 class="member-name">Anurag Sinha</h3>
+                            <p class="member-role">Head of Operations</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers - FilmiFreak</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #6d28d9;
+            --secondary-color: #18181b;
+            --accent-color: #10b981;
+            --dark-bg: #0f0f0f;
+            --dark-element: #1a1a1a;
+            --medium-dark: #252525;
+            --dark-text: #e0e0e0;
+            --light-text: #ffffff;
+            --muted-text: #a0a0a0;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .offers-section {
+            padding: 50px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--light-text);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .offer-card {
+            background-color: var(--dark-element);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .offer-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .offer-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .offer-content {
+            padding: 20px;
+        }
+
+        .offer-title {
+            font-size: 1.5rem;
+            color: var(--light-text);
+            margin-bottom: 10px;
+        }
+
+        .offer-description {
+            color: var(--muted-text);
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .offer-code {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: var(--medium-dark);
+            color: var(--accent-color);
+            border-radius: 5px;
+            font-family: monospace;
+            margin-bottom: 15px;
+        }
+
+        .copy-code-btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .copy-code-btn:hover {
+            background-color: #5b21b6;
+        }
+
+        .terms {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: var(--dark-element);
+            border-radius: 10px;
+        }
+
+        .terms-title {
+            font-size: 1.2rem;
+            color: var(--light-text);
+            margin-bottom: 15px;
+        }
+
+        .terms-list {
+            list-style-type: none;
+        }
+
+        .terms-list li {
+            color: var(--muted-text);
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .terms-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .offers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="offers-section">
+            <h1 class="section-title">Special Offers</h1>
+            
+            <div class="offers-grid">
+                <!-- First Time User Offer -->
+                <div class="offer-card">
+                    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728" alt="First Time User Offer" class="offer-image">
+                    <div class="offer-content">
+                        <h2 class="offer-title">First Time User Offer</h2>
+                        <p class="offer-description">Get flat ₹150 off on your first booking with us!</p>
+                        <div class="offer-code">WELCOME150</div>
+                        <button class="copy-code-btn">Copy Code</button>
+                    </div>
+                </div>
+                
+                <!-- Weekend Special -->
+                <div class="offer-card">
+                    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728" alt="Weekend Special Offer" class="offer-image">
+                    <div class="offer-content">
+                        <h2 class="offer-title">Weekend Special</h2>
+                        <p class="offer-description">Enjoy 20% off on all weekend movie bookings!</p>
+                        <div class="offer-code">WEEKEND20</div>
+                        <button class="copy-code-btn">Copy Code</button>
+                    </div>
+                </div>
+                
+                <!-- Bank Offer -->
+                <div class="offer-card">
+                    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728" alt="Bank Offer" class="offer-image">
+                    <div class="offer-content">
+                        <h2 class="offer-title">Bank Offer</h2>
+                        <p class="offer-description">Get 10% discount on HDFC Bank cards</p>
+                        <div class="offer-code">HDFC10</div>
+                        <button class="copy-code-btn">Copy Code</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="terms">
+                <h2 class="terms-title">Terms and Conditions</h2>
+                <ul class="terms-list">
+                    <li>Offers are valid for a limited time only</li>
+                    <li>Each offer can be used only once per user</li>
+                    <li>Offers cannot be combined with other promotions</li>
+                    <li>FilmiFreak reserves the right to modify or cancel offers at any time</li>
+                    <li>Offers are subject to availability</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.querySelectorAll('.copy-code-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const code = this.previousElementSibling.textContent;
+                navigator.clipboard.writeText(code).then(() => {
+                    const originalText = this.textContent;
+                    this.textContent = 'Copied!';
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

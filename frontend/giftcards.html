@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Cards - FilmiFreak</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #6d28d9;
+            --secondary-color: #18181b;
+            --accent-color: #10b981;
+            --dark-bg: #0f0f0f;
+            --dark-element: #1a1a1a;
+            --medium-dark: #252525;
+            --dark-text: #e0e0e0;
+            --light-text: #ffffff;
+            --muted-text: #a0a0a0;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .gift-cards-section {
+            padding: 50px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--light-text);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .gift-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .gift-card {
+            background-color: var(--dark-element);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .gift-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .gift-card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .gift-card-content {
+            padding: 20px;
+        }
+
+        .gift-card-title {
+            font-size: 1.5rem;
+            color: var(--light-text);
+            margin-bottom: 10px;
+        }
+
+        .gift-card-price {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        .gift-card-description {
+            color: var(--muted-text);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .buy-now-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-now-btn:hover {
+            background-color: #5b21b6;
+        }
+
+        .how-it-works {
+            margin-top: 50px;
+            padding: 40px;
+            background-color: var(--dark-element);
+            border-radius: 10px;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .step-title {
+            font-size: 1.2rem;
+            color: var(--light-text);
+            margin-bottom: 10px;
+        }
+
+        .step-description {
+            color: var(--muted-text);
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .gift-cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="gift-cards-section">
+            <h1 class="section-title">Gift Cards</h1>
+            
+            <div class="gift-cards-grid">
+                <!-- Silver Gift Card -->
+                <div class="gift-card">
+                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e" alt="Silver Gift Card" class="gift-card-image">
+                    <div class="gift-card-content">
+                        <h2 class="gift-card-title">Silver Gift Card</h2>
+                        <p class="gift-card-price">₹500</p>
+                        <p class="gift-card-description">Perfect for a movie night with friends or family. Valid for 6 months.</p>
+                        <a href="#" class="buy-now-btn">Buy Now</a>
+                    </div>
+                </div>
+                
+                <!-- Gold Gift Card -->
+                <div class="gift-card">
+                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e" alt="Gold Gift Card" class="gift-card-image">
+                    <div class="gift-card-content">
+                        <h2 class="gift-card-title">Gold Gift Card</h2>
+                        <p class="gift-card-price">₹1000</p>
+                        <p class="gift-card-description">Great for multiple movie experiences. Valid for 1 year.</p>
+                        <a href="#" class="buy-now-btn">Buy Now</a>
+                    </div>
+                </div>
+                
+                <!-- Platinum Gift Card -->
+                <div class="gift-card">
+                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e" alt="Platinum Gift Card" class="gift-card-image">
+                    <div class="gift-card-content">
+                        <h2 class="gift-card-title">Platinum Gift Card</h2>
+                        <p class="gift-card-price">₹2000</p>
+                        <p class="gift-card-description">Premium experience with additional benefits. Valid for 1 year.</p>
+                        <a href="#" class="buy-now-btn">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="how-it-works">
+                <h2 class="section-title">How It Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3 class="step-title">Choose Your Card</h3>
+                        <p class="step-description">Select from our range of gift cards</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3 class="step-title">Make Payment</h3>
+                        <p class="step-description">Complete your purchase securely</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h3 class="step-title">Receive & Use</h3>
+                        <p class="step-description">Get your card instantly and start using</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html> 
